@@ -1,4 +1,4 @@
-// /add-favorite/:id
+// //add-dish
 const Menu = require("../../models/menu");
 
 const addToStore = async (req, res) => {

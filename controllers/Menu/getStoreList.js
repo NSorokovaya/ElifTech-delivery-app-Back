@@ -2,14 +2,20 @@
 const Menu = require("../../models/menu");
 
 const getStoreList = async (req, res) => {
-  const result = await Menu.find({
+  const results = await Menu.find({
     shoppingList: { $exists: true, $ne: [] },
   });
-  console.log(result);
+
+  let totalPrice = 0;
+  for (const result of results) {
+    totalPrice += result.price;
+  }
+
   res.json({
     status: 200,
     message: "success",
-    data: result,
+    data: results,
+    totalPrice,
   });
 };
 
