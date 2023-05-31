@@ -4,6 +4,7 @@ const addToStore = require("./addToStore");
 const deleteFromStore = require("./deleteFromStore");
 const getStoreList = require("./getStoreList");
 const createOrder = require("./createOrder");
+const getCafesList = require("./getCafesList");
 
 module.exports = {
   getMenuByCategory,
@@ -12,4 +13,5 @@ module.exports = {
   deleteFromStore,
   getStoreList,
   createOrder,
+  getCafesList,
 };
